@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 
 # === Parameters ===
-KNOWN_WIDTH_OBJECT = 1.0  # Width of the smallest object (e.g., pin) in cm
+KNOWN_WIDTH_OBJECT = 1.0  # Width of the smallest object (e.g., pin) in m
 FOCAL_LENGTH = 500        # Adjust this value after calibration
-MAX_DISTANCE = 30.0       # Maximum distance to detect objects in cm
+MAX_DISTANCE = 30.0       # Maximum distance to detect objects in m
 
 # === Distance Calculation Function ===
 def calculate_distance(known_width, focal_length, per_width):
@@ -64,7 +64,7 @@ while True:
     if closest_contour is not None:
         x, y, w, h = cv2.boundingRect(closest_contour)
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        cv2.putText(frame, f"Distance: {closest_distance:.2f} cm", (x, y-10), 
+        cv2.putText(frame, f"Distance: {closest_distance:.2f} cm", (x, y-10),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
         print(f"Object detected at: {closest_distance:.2f} cm")
     
