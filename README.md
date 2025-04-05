@@ -1,4 +1,5 @@
-**Autonomous Vehicle Obstacle Avoidance and Trajectory Planning System**
+                                   **Autonomous Vehicle Obstacle Avoidance and Trajectory Planning System**
+
 This project focuses on designing and implementing an obstacle avoidance and path-planning system for autonomous vehicles. The approach utilizes a combination of simulation environments, sensor modeling, and control algorithms to navigate around obstacles while following an optimal trajectory.
 
 📁 Project Overview
